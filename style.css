@@ -4,33 +4,40 @@
     padding: 0;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("images/pattern-background-desktop.svg") no-repeat;
-    background-size: cover;
+    background: url("./images/pattern-background-desktop.svg") no-repeat;
+    background-size: contain;
     font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%);
 }
 main {
-    background-color: #FFFFFF;
+    background-color: white;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width:432px
+}
+.main-img,
+img {
+    width: 100%;
 }
 .other {
-    height: 375px;
+/*     height: 375px; */
     width: 350px;
-    padding: 0 50px 50px 50px;
+    padding: 20px;
 }
 .main-img svg {
     border-radius: 15px 15px 0 0;
+    width: 100%;
 }
 main h1 {
     font-weight: 900;
-    color: #1D2D4B;
+    color: hsl(223, 47%, 23%);
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -38,7 +45,7 @@ main h1 {
 .offer {
     display: flex;
     width: 330px;
-    background-color: #F8F9FE;
+    background-color: hsl(225, 100%, 98%);
     padding: 20px 10px 20px 10px;
     border-radius: 10px;
 }
@@ -54,16 +61,17 @@ main h1 {
     margin-left: 1.2rem;
 }
 .left span {
-    color: #8B95AE;
+    color: hsl(225, 100%, 94%);
+    font-weight: 700;
 }
 .change a {
-    color: #3E33B3;
+    color: hsl(245, 75%, 52%);
     margin-left: 6rem;
 }
 .proced {
     width: 330px;
     height: 15px;
-    background-color: #382AE1;
+    background-color: hsl(245, 75%, 52%);
     color: white;
     padding: 20px 10px 20px 10px;
     margin-top: 25px;
@@ -72,7 +80,7 @@ main h1 {
     cursor: pointer;
 }
 .cancel {
-    color: #8B95AE;
+    color: hsl(224, 23%, 55%);
     margin-top: 25px;
     border: none;
     background-color: inherit;
@@ -81,15 +89,22 @@ main h1 {
     font-size: 1.2rem;
 }
 a:hover {
-    color: #8C86D8;
+    color: hsl(224, 23%, 55%);
     text-decoration: none;
 }
 .proced:hover {
-    background-color: #766CF1;
+    background-color: hsl(224, 23%, 55%);
 }
 .cancel:hover {
-    color: #263146;
+    color: hsl(223, 47%, 23%);
 }
 .description {
     margin-bottom: 25px;
+}
+@media (max-width: 675px) {
+    body {
+        background: url("./images/pattern-background-mobile.svg") no-repeat;
+        background-size: contain;
+        background-color: hsl(225, 100%, 94%);
+    }
 }
